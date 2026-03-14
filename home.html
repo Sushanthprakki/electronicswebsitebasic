@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>XYZ Electronics</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      background: #34495e;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    section {
+      display: none;
+      padding: 40px;
+      text-align: center;
+    }
+    section.active {
+      display: block;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    .product {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin: 15px;
+      padding: 15px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    .product:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .product img {
+      max-width: 100%;
+      height: auto;
+    }
+    .buy-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #2c3e50;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .buy-btn:hover {
+      background: #1abc9c;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>XYZ Electronics</h1>
+    <p>Premium electronics for best performance and quality.</p>
+  </header>
+
+  <nav>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('products')">Products</a>
+    <a onclick="showSection('about')">About</a>
+    <a onclick="showSection('contact')">Contact</a>
+  </nav>
+
+  <section id="home" class="active">
+    <h2>Welcome to XYZ Electronics</h2>
+    <p>Your one-stop shop for premium gadgets.</p>
+  </section>
+
+  <section id="products">
+    <h2>Our Products</h2>
+    <div class="container">
+      <div class="product">
+        <img src="https://img.myipadbox.com/upload/store/product_l/MPH1613H.jpg" alt="IQOO 15 smartphone">
+        <h3>IQOO 15</h3>
+        <p>High-performance smartphone with Snapdragon 8 Elite Gen 5 processor.</p>
+        <p><strong>₹72,999</strong></p>
+        <a href="https://www.amazon.in/s?k=iqoo+15" target="_blank" class="buy-btn">Buy Now</a>
+      </div>
+
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/81ZpEv8tvbL.jpg" alt="MSI Stealth 16 Mercedes Edition">
+        <h3>MSI Stealth 16 Mercedes Edition</h3>
+        <p>Luxury gaming laptop designed in collaboration with Mercedes-AMG Motorsport.</p>
+        <p><strong>₹2,85,000</strong></p>
+        <a href="https://www.amazon.in/s?k=MSI+Stealth+16+Mercedes+Edition" target="_blank" class="buy-btn">Buy Now</a>
+      </div>
+
+      <div class="product">
+        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRoI5UejY7wuVAcHM5CCkbCh8XHlZCLFZSdwCOgrbM0qZQeeSDyvG-XfGJnzpEkuWtwLHOZ_n35FDbMvWjS8Tal6WRlcorQR_2L9ctEgVdrNgJ-4bU57y7VW92T" alt="Bose QuietComfort earbuds">
+        <h3>Bose QuietComfort</h3>
+        <p>Wireless earbuds with long battery life.</p>
+        <p><strong>₹32,299</strong></p>
+        <a href="https://www.amazon.in/s?k=bose+quietcomfort+earbuds" target="_blank" class="buy-btn">Buy Now</a>
+      </div>
+
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/91z5KuonXrL._AC_UF1000,1000_QL80_.jpg" alt="Apple Watch Ultra">
+        <h3>Apple Watch Ultra</h3>
+        <p>Track fitness and notifications on the go.</p>
+        <p><strong>₹84,499</strong></p>
+        <a href="https://www.amazon.in/s?k=apple+watch+ultra" target="_blank" class="buy-btn">Buy Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>XYZ Electronics is committed to delivering high-quality gadgets with cutting-edge technology.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@xyzelectronics.com</p>
+    <p>Phone: +91-9876543210</p>
+  </section>
+
+  <script>
+    function showSection(sectionId) {
+      var sections = document.querySelectorAll("section");
+      sections.forEach(function(sec) {
+        sec.classList.remove("active");
+      });
+      document.getElementById(sectionId).classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
